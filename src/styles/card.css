@@ -1,9 +1,9 @@
 @layer component {
   .card {
     background: var(--neon-bg);
+    box-shadow: var(--neon-shadow);
     backdrop-filter: invert(1);
     border: 0.1rem solid #fff;
     border-radius: 1rem;
-    box-shadow: var(--neon-shadow);
   }
 }

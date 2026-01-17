@@ -3,6 +3,10 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Container from '../components/Container.astro';
 import Background from '../components/Background.astro';
+import { matchPathname } from 'astro/assets/utils';
+
+const pathname = Astro.url.pathname;
+const color = pathname === '/my-site' ? ' cyan' : ' purple';
 ---
 
 <html lang="en">
@@ -13,10 +17,10 @@ import Background from '../components/Background.astro';
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <Background />
-  <body class="h-screen bg-black">
+  <body class={'h-screen bg-black' + color}>
+    <Background />
     <Header />
-    <div class="grow overflow-auto mt-24">
+    <div class="grow overflow-auto pt-24">
       <Container>
         <slot />
       </Container>
