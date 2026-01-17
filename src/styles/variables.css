@@ -1,11 +1,14 @@
 :root {
+  --purple: 255 0 255;
+  --cyan: 0 255 255;
+
   --neon-shadow:
-    0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 0.8rem rgba(255, 0, 255),
-    0 0 1.8rem rgba(255, 0, 255), inset 0 0 1.3rem rgba(255, 0, 255);
+    0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 0.8rem rgb(var(--purple)),
+    0 0 1.8rem rgb(var(--purple)), inset 0 0 1.3rem rgb(var(--purple));
 
   --neon-bg: linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.9) 0,
-    rgba(255, 0, 255, 0.7) 100%
+    rgb(var(--purple) / 0.5) 100%
   );
 }
