@@ -1,0 +1,9 @@
+---
+interface Props {
+  title: string;
+  href: string;
+}
+const { title, href } = Astro.props;
+---
+
+<a class="glitch" href={href} data-glitch={title}>{title}</a>
