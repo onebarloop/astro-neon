@@ -3,10 +3,13 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Container from '../components/Container.astro';
 import Background from '../components/Background.astro';
-import { matchPathname } from 'astro/assets/utils';
 
 const pathname = Astro.url.pathname;
-const color = pathname === '/my-site' ? ' cyan' : ' purple';
+const colorConfig = new Map([
+  ['/', 'purple'],
+  ['/my-site', 'cyan'],
+]);
+const color = colorConfig.get(pathname) || 'purple';
 ---
 
 <html lang="en">
@@ -17,7 +20,7 @@ const color = pathname === '/my-site' ? ' cyan' : ' purple';
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class={'h-screen bg-black' + color}>
+  <body class:list={['h-screen', 'bg-black', color]}>
     <Background />
     <Header />
     <div class="grow overflow-auto pt-24">
@@ -26,4 +29,4 @@ const color = pathname === '/my-site' ? ' cyan' : ' purple';
       </Container>
     </div>
   </body>
-</html>
+</html>; ---
