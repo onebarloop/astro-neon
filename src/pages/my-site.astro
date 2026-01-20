@@ -1,7 +1,15 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Card from '../components/Card.astro';
 ---
 
 <MainLayout>
-  <h1>MY SITE</h1>
+  <div class="grid grid-cols-2 gap-24 h-500 mb-24">
+    <Card class="row-span-2" />
+    <Card />
+    <Card />
+    <Card />
+    <Card class="row-span-2" />
+    <Card />
+  </div>
 </MainLayout>

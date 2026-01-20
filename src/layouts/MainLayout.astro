@@ -12,7 +12,7 @@ const colorConfig = new Map([
 const color = colorConfig.get(pathname) || 'purple';
 ---
 
-<html lang="en">
+<html data-theme={color} lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -20,7 +20,7 @@ const color = colorConfig.get(pathname) || 'purple';
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class:list={['h-screen', 'bg-black', color]}>
+  <body class="h-screen bg-black">
     <Background />
     <Header />
     <div class="grow overflow-auto pt-24">
@@ -29,4 +29,4 @@ const color = colorConfig.get(pathname) || 'purple';
       </Container>
     </div>
   </body>
-</html>; ---
+</html>

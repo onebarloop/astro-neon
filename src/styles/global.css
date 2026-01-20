@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './variables';
+@import './theme.css';
 @import './glitch';
 @import './card';
-@import './variables';

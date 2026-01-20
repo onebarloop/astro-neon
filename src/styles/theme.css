@@ -1,0 +1,9 @@
+html[data-theme='purple'] {
+  --neon-shadow: var(--neon-shadow-purple);
+  --neon-bg: var(--neon-bg-purple);
+}
+
+html[data-theme='cyan'] {
+  --neon-shadow: var(--neon-shadow-cyan);
+  --neon-bg: var(--neon-bg-cyan);
+}
